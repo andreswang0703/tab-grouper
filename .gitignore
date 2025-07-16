@@ -1,0 +1,15 @@
+# Node modules (local packages)
+node_modules/
+
+# Output build directory
+dist/
+tab-grouper.zip
+
+# IDE/editor configs
+.vscode/
+.idea/
+
+# Dependency lock files
+package-lock.json
+
+.DS_Store

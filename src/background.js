@@ -1,4 +1,4 @@
-
+import { getDomain } from 'tldts';
 
 chrome.commands.onCommand.addListener(async (command) => {
 
@@ -12,21 +12,20 @@ chrome.commands.onCommand.addListener(async (command) => {
 
     switch (command) {
         case "group-tabs-by-domain":
-            const activeDomain = (new URL(activeTab.url)).hostname;
+
+            const baseDomain = getDomain(activeTab.url);
+            if (!baseDomain) return;
+
             const matchingTabs = allTabs.filter(tab => {
-                if (!tab.url) return false;
-                try {
-                    return (new URL(tab.url)).hostname === activeDomain;
-                } catch {
-                    return false;
-                }
+            return getDomain(tab.url) === baseDomain;
             });
 
             if (matchingTabs.length > 1) {
-                const tabIds = matchingTabs.map(tab => tab.id);
-                chrome.tabs.group({ tabIds });
+            const tabIds = matchingTabs.map(tab => tab.id);
+            chrome.tabs.group({ tabIds });
             }
             break;
+
 
         case "group-right-neighbor-tab":
             

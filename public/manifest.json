@@ -2,10 +2,9 @@
     "manifest_version": 3,
     "name": "Tab Grouper",
     "version": "1.0",
-    "description": "Groups tabs from the same domain.",
+    "description": "Minimal tool for managing chrome tabs grouping",
     "permissions": [
-        "tabs",
-        "tabGroups"
+        "tabs"
     ],
     "background": {
         "service_worker": "background.js"
@@ -37,7 +36,7 @@
                 "default": "Ctrl+Shift+U",
                 "mac": "Command+Shift+U"
             },
-            "description": "Ungroup the current tab’s group. Double-tap the key to ungroup all tabs."
+            "description": "Ungroup the current tab group. Double-tap the key to ungroup all tabs."
         }
     },
     "action": {
