@@ -43,7 +43,27 @@ You can customize these under `chrome://extensions/shortcuts`.
 | Permission   | Why It's Needed                          |
 |--------------|------------------------------------------|
 | `tabs`       | To access and manipulate browser tabs    |
-| `tabGroups`  | To create and modify tab groups          |
 
 ✅ No data is collected or transmitted.  
 ✅ No tracking or third-party services used.
+
+
+## 🛠 Setup & Build Instructions
+
+### 1. Install Dependencies
+
+```bash
+npm install
+```
+
+### 2. Local development
+
+```bash
+npm run dev
+```
+
+### 3. Build zip
+
+```bash
+npm run build
+```
