@@ -81,6 +81,26 @@ chrome.commands.onCommand.addListener(async (command) => {
 
             lastTriggerTimeForUngroup = now;
             break;
+        
+        case "close-tabs-to-the-right":
+            const tabsToTheRight = allTabs.slice(currentIndex + 1);
+            if (tabsToTheRight.length > 0) {
+                const tabIds = tabsToTheRight.map(tab => tab.id);
+                await chrome.tabs.remove(tabIds);
+            }
+            break;
+
+        case "switch-to-first-tab":
+            if (allTabs.length > 0) {
+                await chrome.tabs.update(allTabs[0].id, { active: true });
+            }
+            break;
+
+        case "switch-to-last-tab":
+            if (allTabs.length > 0) {
+                await chrome.tabs.update(allTabs[allTabs.length - 1].id, { active: true });
+            }
+            break;
              
     }
 });

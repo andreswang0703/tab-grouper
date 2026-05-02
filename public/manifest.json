@@ -37,6 +37,15 @@
                 "mac": "Command+Shift+U"
             },
             "description": "Ungroup the current tab group. Double-tap the key to ungroup all tabs."
+        },
+        "close-tabs-to-the-right": {
+            "description": "Close all tabs after the current tab."
+        },
+        "switch-to-first-tab": {
+            "description": "Switch to the first tab."
+        },
+        "switch-to-last-tab": {
+            "description": "Switch to the last tab."
         }
     },
     "action": {

@@ -11,6 +11,8 @@
 - ✅ Automatically create or extend tab groups
 - ✅ Ungroup the current tab's group
 - ✅ Ungroup all tabs in the current window
+- ✅ Close all tabs after the current tab
+- ✅ Switch to the first or last tab
 
 ---
 
@@ -24,8 +26,12 @@ You can customize these under `chrome://extensions/shortcuts`.
 | Group right neighbor tab    | `Ctrl+Shift+Right`       | `Command+Shift+Right`  | Adds the tab to the right into the group   |
 | Group left neighbor tab     | `Ctrl+Shift+Left`        | `Command+Shift+Left`   | Adds the tab to the left into the group    |
 | Ungroup current tab group   | `Ctrl+Shift+U`           | `Command+Shift+U`      | Removes current tab from group             |
+| Close tabs after current tab| User assigned            | User assigned          | Closes all tabs after the current tab      |
+| Switch to first tab         | User assigned            | User assigned          | Activates the first tab in the window      |
+| Switch to last tab          | User assigned            | User assigned          | Activates the last tab in the window       |
 
 > 💡 *Double press the ungroup shortcut within a second to ungroup all tabs in the window.*
+> 💡 *Assign shortcuts for user-assigned commands under `chrome://extensions/shortcuts`.*
 
 ---
 
@@ -47,6 +53,8 @@ You can customize these under `chrome://extensions/shortcuts`.
 ✅ No data is collected or transmitted.  
 ✅ No tracking or third-party services used.
 
+
+---
 
 ## 🛠 Setup & Build Instructions
 
